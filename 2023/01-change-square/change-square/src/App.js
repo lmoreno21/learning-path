@@ -1,25 +1,15 @@
 import {  useState } from "react";
 import './App.css';
+import Square from "./components/Square";
+import Button from "./components/Button";
 
 function App() {
   const [bgColor, setBgColor] = useState('')
 
-  function generateBgColor() {
-    var randomHex = (Math.floor(Math.random() * (16777215 + 1))).toString(16)
-    var newBgColor = '#' + randomHex
-    return newBgColor
-  }
-
-  function handleClick() {
-    setBgColor(generateBgColor())
-  }
-
   return (
     <div className="App">
-      <div className="Square" style={{backgroundColor: bgColor}}>
-        {/* <div className="Words">{bgColor}</div> */}
-      </div>
-      <button onClick={handleClick}>click here to change color</button>
+      <Square bgColor={bgColor} />
+      <Button setBgColor={setBgColor}/> 
     </div>
   );
 }
