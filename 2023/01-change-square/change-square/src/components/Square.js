@@ -1,3 +1,3 @@
-export default function Square({ bgColor, setBgColor }) {
+export default function Square({ bgColor }) {
     return <div className="Square" style={{backgroundColor: bgColor}}></div>
 }
