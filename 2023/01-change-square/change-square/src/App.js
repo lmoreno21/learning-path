@@ -16,8 +16,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Square">
-        <div className="Words">{bgColor}</div>
+      <div className="Square" style={{backgroundColor: bgColor}}>
+        {/* <div className="Words">{bgColor}</div> */}
       </div>
       <button onClick={handleClick}>click here to change color</button>
     </div>
