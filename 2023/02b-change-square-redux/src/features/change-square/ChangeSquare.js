@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 
 export function ChangeSquare () {
-    
+    const [bgColor, setBgColor] = useState('')
+
     function generateBgColor() {
         var randomHex = (Math.floor(Math.random() * (16777215 + 1))).toString(16)
         var newBgColor = '#' + randomHex
