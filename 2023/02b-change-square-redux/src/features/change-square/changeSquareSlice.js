@@ -1,21 +1,8 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     value: '#FFFFFF'
 }
-
-// The function below is called a thunk and allows us to perform async logic. It
-// can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
-// will call the thunk with the `dispatch` function as the first argument. Async
-// code can then be executed and other actions can be dispatched. Thunks are
-// typically used to make async requests.
-export const generateColor = createAsyncThunk (
-    'generateBgColor',
-    async() => {
-        const response = generateBgColor()
-        return response
-    }
-)
 
 function generateBgColor() {
     var randomHex = (Math.floor(Math.random() * (16777215 + 1))).toString(16)
@@ -29,13 +16,13 @@ export const changeSquareSlice = createSlice({
     reducers: {
         changeColor: (state) => {
             state.value = generateBgColor()
-            console.log(state)
         },
         handleClickPink: (state) => {
             state.value = '#ffc2d1'
         }
     }
 })
+
 export const { changeColor, handleClickPink } = changeSquareSlice.actions;
 
 export const selectColor = (state) => state.changeSquare.value;

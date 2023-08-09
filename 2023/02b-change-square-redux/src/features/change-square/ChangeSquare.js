@@ -9,7 +9,6 @@ import {
 
 export function ChangeSquare () {
     const color = useSelector(selectColor);
-    // const [bgColor, setBgColor] = useState('')
     const dispatch = useDispatch();
 
     return (
