@@ -1,8 +1,4 @@
 import React from 'react';
-// import { Counter } from './features/counter/Counter';
-// import { Button } from './features/change-square/Button';
-// import { Square } from './features/change-square/Square';
-import { ChangeSquare } from './features/change-square/ChangeSquare';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
@@ -10,15 +6,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-        {/* <Counter /> */}
-        {/* <Button /> */}
-        {/* <Square /> */}
-        <ChangeSquare />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <span>
           <span>Learn </span>
