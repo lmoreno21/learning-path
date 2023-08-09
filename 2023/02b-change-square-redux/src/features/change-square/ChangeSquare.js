@@ -1,23 +1,15 @@
 import React, { useState } from 'react'
 
+import { useSelector, useDispatch } from 'react-redux';
+import { changeColor, selectColor } from './changeSquareSlice';
+import styles from '../counter/Counter.module.css';
+
 
 export function ChangeSquare () {
+    const color = useSelector(selectColor);
     const [bgColor, setBgColor] = useState('')
+    const dispatch = useDispatch();
 
-    function generateBgColor() {
-        var randomHex = (Math.floor(Math.random() * (16777215 + 1))).toString(16)
-        var newBgColor = '#' + randomHex
-        return newBgColor
-      }
-    
-      function handleClick() {
-        setBgColor(generateBgColor())
-      }
-
-      function handleClickPink() {
-        setBgColor('#ffc2d1')
-      }
-      
     return (
         <div>
             <div 
@@ -25,13 +17,14 @@ export function ChangeSquare () {
                 style={{backgroundColor: bgColor}}>
             </div>
             <button 
-                onClick={handleClick}>
+                // onClick={handleClick} 
+                onClick={() => dispatch(changeColor())}>
                     click here to change color
             </button>
             <br/><br/><br/>
-            <button onClick={handleClickPink}>
+            {/* <button onClick={handleClickPink}>
                 click here to change to pink
-            </button>
+            </button> */}
         </div>
     )
 }
