@@ -64,4 +64,8 @@ export function Counter() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1a618f0fb536f4fcc52b1b094f707e5c552a08c1
