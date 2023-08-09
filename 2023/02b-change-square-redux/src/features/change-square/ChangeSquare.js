@@ -13,6 +13,11 @@ export function ChangeSquare () {
       function handleClick() {
         setBgColor(generateBgColor())
       }
+
+      function handleClickPink() {
+        setBgColor('#ffc2d1')
+      }
+      
     return (
         <div>
             <div 
@@ -22,6 +27,10 @@ export function ChangeSquare () {
             <button 
                 onClick={handleClick}>
                     click here to change color
+            </button>
+            <br/><br/><br/>
+            <button onClick={handleClickPink}>
+                click here to change to pink
             </button>
         </div>
     )
