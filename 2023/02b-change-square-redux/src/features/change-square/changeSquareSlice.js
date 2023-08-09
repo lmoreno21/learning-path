@@ -21,7 +21,7 @@ function generateBgColor() {
     var randomHex = (Math.floor(Math.random() * (16777215 + 1))).toString(16)
     var newBgColor = '#' + randomHex
     return newBgColor
-  }
+}
 
 export const changeSquareSlice = createSlice({
     name: 'changeSquare',
@@ -29,10 +29,14 @@ export const changeSquareSlice = createSlice({
     reducers: {
         changeColor: (state) => {
             state.value = generateBgColor()
+            console.log(state)
+        },
+        handleClickPink: (state) => {
+            state.value = '#ffc2d1'
         }
     }
 })
-export const { changeColor } = changeSquareSlice.actions;
+export const { changeColor, handleClickPink } = changeSquareSlice.actions;
 
 export const selectColor = (state) => state.changeSquare.value;
 

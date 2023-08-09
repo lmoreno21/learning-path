@@ -1,32 +1,32 @@
-import React, { useState } from 'react'
-
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { changeColor, selectColor } from './changeSquareSlice';
-import styles from '../counter/Counter.module.css';
+import { 
+    changeColor, 
+    selectColor, 
+    handleClickPink 
+} from './changeSquareSlice';
 
 
 export function ChangeSquare () {
     const color = useSelector(selectColor);
-    const [bgColor, setBgColor] = useState('')
+    // const [bgColor, setBgColor] = useState('')
     const dispatch = useDispatch();
 
     return (
         <div>
             <div 
                 className="Square" 
-                style={{backgroundColor: bgColor}}>
+                style={{backgroundColor: color}}>
             </div>
             <button 
-                // onClick={handleClick} 
-                onClick={() => dispatch(changeColor())}>
+                onClick={() => dispatch(changeColor(color))}>
                     click here to change color
             </button>
             <br/><br/><br/>
-            {/* <button onClick={handleClickPink}>
+            <button 
+                onClick={() => dispatch(handleClickPink())}>
                 click here to change to pink
-            </button> */}
+            </button>
         </div>
     )
-}
-
-// export default ChangeSquare
+};
