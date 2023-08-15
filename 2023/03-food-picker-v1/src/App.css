@@ -14,4 +14,15 @@
 .todaysPick {
   border: solid 1px red;
   padding: 20px;
+  width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  background-color: lightcoral;
+  font-weight: bold;
+  border-radius: 25px;
+  
 }
