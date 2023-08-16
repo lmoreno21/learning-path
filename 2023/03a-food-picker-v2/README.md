@@ -5,9 +5,10 @@ Goal: Update 03-food-picker-app-v1 to include an API
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Resources + Links Used
-[https://github.com/reduxjs/redux-templates/tree/master/packages/cra-template-redux]\
-[https://react-redux.js.org/tutorials/typescript-quick-start]\
-[https://dev.to/cyberwolves/how-to-call-apis-in-react-redux-3f9k]\
+[https://github.com/reduxjs/redux-templates/tree/master/packages/cra-template-redux] \
+[https://react-redux.js.org/tutorials/typescript-quick-start] \
+[https://dev.to/cyberwolves/how-to-call-apis-in-react-redux-3f9k] \
+[https://docs.developer.yelp.com/] \
 
 ## Available Scripts
 
