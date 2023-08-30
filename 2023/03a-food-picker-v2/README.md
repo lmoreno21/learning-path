@@ -9,6 +9,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 [https://react-redux.js.org/tutorials/typescript-quick-start] \
 [https://dev.to/cyberwolves/how-to-call-apis-in-react-redux-3f9k] \
 [https://docs.developer.yelp.com/] \
+[https://dev.to/cyberwolves/how-to-call-apis-in-react-redux-3f9k] \
+[https://redux.js.org/tutorials/essentials/part-5-async-logic]
 
 ## Available Scripts
 

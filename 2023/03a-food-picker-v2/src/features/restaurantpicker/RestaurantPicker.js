@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { 
     randomRestaurant, 
     selectRestaurant,
 } from './restaurantPickerSlice';
+import { fetchData } from './restaurantListSlice'
 
 
 export function RestaurantPicker() {
@@ -28,6 +29,19 @@ export function RestaurantPicker() {
                 onClick={() => dispatch(randomRestaurant(restaurant))}>
                 Click Here for Today's Restaurant
             </button>
+
+            <br/><br/>
+            {/* <form>
+                <input></input>
+            </form> */}
+
+            <div>
+                {/* this is where i want the output of the api to go */}
+                <button
+                    onClick={() => dispatch(fetchData())}>
+                    Click here for Console Log
+                </button>
+            </div>
         </div>
     )
 }
